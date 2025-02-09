@@ -64,7 +64,6 @@ export function Deserialize(serializeString: string) {
 
     } else if (res[i] === "*") {
       const resArray = deserializeArray(res,i);
-      // console.log(resArray)
       deserialization.push(resArray.value);
       i = (resArray.newIndex as number);
     }
@@ -83,7 +82,9 @@ function deserializeArray(res:string, i: number):  Record<string,string | number
   }
   i+= check(res[i]) ? 0 : 2;
   arryCount = Number(size);
-  const array = [];
+  const array:any = [];
+
+  console.log(arryCount)
 
   if(!arryCount && size === ""){
      return {value: null, newIndex: i};

@@ -24,10 +24,8 @@ export class ExecuteCommand extends Transform {
   }
   _transform(chunk: any, encoding: BufferEncoding, callback: TransformCallback): void {
     const transformChunk: string = chunk.toString();
-    console.log(transformChunk)
     const defaultType = "bulk_string";
     const chunkArray = transformChunk.split(" ");
-    console.log(chunkArray.slice(1));
     if (commands[chunkArray[0].toUpperCase()]) {
       const commandRes = commands[chunkArray[0].toUpperCase()]({clientStore:this.clientStore,params: chunkArray.slice(1)});
       const commandArray = commandRes.toString().split(" ");
