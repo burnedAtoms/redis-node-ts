@@ -5,7 +5,6 @@ import { DeserializeTransformer } from "./utils/transformers/transformer.js";
 
 const PORT = 6379;
 const client = net.createConnection(PORT, "localhost", async () => {
-  const clientStore: Map<string,string> = new Map();
   console.log("Connected to server");
 });
 
