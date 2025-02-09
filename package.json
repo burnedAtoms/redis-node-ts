@@ -1,0 +1,31 @@
+{
+  "name": "redis-node-ts",
+  "version": "1.0.0",
+  "description": "For this project I am building redis using nodejs and typescript to learn the core functionalities of redis.",
+  "main": "dist/src/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -b",
+    "server": "tsc -b && node ./dist/src/server.js",
+    "client": "tsc -b && node ./dist/src/client.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/burnedAtoms/redis-node-ts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/burnedAtoms/redis-node-ts/issues"
+  },
+  "homepage": "https://github.com/burnedAtoms/redis-node-ts#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.1",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.7.3"
+  }
+}
